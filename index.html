@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlanceAI — Even G2</title>
+  </head>
+  <body>
+    <!--
+      This page is the WebView page loaded by the Even Realities App.
+      On the glasses, the UI is rendered through the Even Hub SDK bridge
+      (text containers on the 576x288 green display), not with this DOM.
+
+      The DOM below serves two purposes:
+      1. Browser preview mode: when no Even bridge is present (plain
+         browser), the same screens are drawn into the 576x288 frame
+         below so the app can be developed and demoed without hardware.
+      2. Companion input: a phone-side text box to type a question and
+         push the answer card to the glasses.
+    -->
+    <main id="phone-ui">
+      <h1>GlanceAI</h1>
+      <p class="hint">
+        Preview of the G2 display (576 × 288). Click = tap, double-click =
+        double tap, mouse wheel / ↑ ↓ = swipe. On real glasses the same
+        screens are rendered by the Even Hub SDK.
+      </p>
+      <div id="g2-frame" tabindex="0" aria-label="G2 display preview">
+        <pre id="g2-screen">Starting…</pre>
+      </div>
+
+      <form id="ask-form">
+        <label for="ask-input">Ask something (answer appears on the glasses):</label>
+        <div class="row">
+          <input
+            id="ask-input"
+            type="text"
+            maxlength="200"
+            placeholder="e.g. What is the BTC price?"
+            autocomplete="off"
+          />
+          <button type="submit">Ask</button>
+        </div>
+      </form>
+      <p id="mode-line" class="hint"></p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

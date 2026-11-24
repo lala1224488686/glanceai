@@ -1,0 +1,97 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #101410;
+  color: #d8e6d8;
+}
+
+#phone-ui {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+#phone-ui h1 {
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.hint {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #9db89d;
+}
+
+/* The G2 preview frame: exactly the glasses' 576x288 canvas, rendered
+   in the display's monochrome green with large type. */
+#g2-frame {
+  width: 576px;
+  max-width: 100%;
+  aspect-ratio: 2 / 1;
+  background: #000;
+  border: 2px solid #2c4a2c;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
+
+#g2-frame:focus {
+  border-color: #4dff4d;
+}
+
+#g2-screen {
+  margin: 0;
+  padding: 14px 16px;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #4dff4d;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+#ask-form {
+  margin-top: 20px;
+}
+
+#ask-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#ask-form .row {
+  display: flex;
+  gap: 8px;
+}
+
+#ask-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #2c4a2c;
+  background: #0a0f0a;
+  color: #eaffea;
+}
+
+#ask-form button {
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 0;
+  background: #1f7a1f;
+  color: #fff;
+  cursor: pointer;
+}
+
+#ask-form button:active {
+  background: #175c17;
+}

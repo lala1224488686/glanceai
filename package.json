@@ -1,0 +1,1 @@
+{"dependencies":{"@evenrealities/even_hub_sdk":"^0.0.14"},"devDependencies":{"typescript":"^5.6.0","vite":"^6.0.0"},"name":"glanceai","private":true,"scripts":{"build":"tsc && vite build","dev":"vite","preview":"vite preview"},"type":"module","version":"0.1.0"}
